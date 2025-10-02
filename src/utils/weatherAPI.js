@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY || 'YOUR_API_KEY_HERE';
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY ;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 const api = axios.create({
@@ -74,4 +74,5 @@ export const convertTemperature = (kelvin, unit) => {
 // Weather icon URL
 export const getWeatherIcon = (iconCode) => {
   return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
 };
