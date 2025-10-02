@@ -36,3 +36,8 @@ A modern, responsive weather application built with React that provides real-tim
 ```bash
 git clone https://github.com/Apurvbkt/weather-forecast-app.git
 cd weather-forecast-app
+
+### Step 2: Clone the Repository
+```bash
+npm install
+
