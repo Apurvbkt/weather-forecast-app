@@ -36,8 +36,30 @@ A modern, responsive weather application built with React that provides real-tim
 ```bash
 git clone https://github.com/Apurvbkt/weather-forecast-app.git
 cd weather-forecast-app
-
-### Step 2: Clone the Repository
+```
+### Step 2: Install Dependencies
 ```bash
 npm install
+```
+### Step 3: Environment Setup
+```bash
+# Copy environment template
+cp .env.example .env
+
+# Edit .env file and add your API key
+# Add this line to .env file:
+# REACT_APP_WEATHER_API_KEY=your_actual_api_key_here
+```
+### Step 4: Get API Key:
+- Go to OpenWeatherMap
+- Create free account
+- Get API key from dashboard
+- Add it to .env file
+
+### Step 5: Run the Application
+```bash
+npm start
+```
+
+
 
