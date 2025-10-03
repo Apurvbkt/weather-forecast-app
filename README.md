@@ -60,6 +60,75 @@ cp .env.example .env
 ```bash
 npm start
 ```
+## 🎯 Design Choices & Assumptions
 
+### 🏗️ Architecture Decisions
+
+**Component Structure**
+- **Functional Components with Hooks**: Used modern React patterns for better readability and testing
+- **Context API for Theme Management**: Implemented global state for dark/light mode without over-engineering
+- **Separation of Concerns**: Dedicated components for Search, Current Weather, Forecast, and UI elements
+
+**State Management**
+- **Local State**: Component-specific data (loading states, user input)
+- **Context API**: Cross-component themes and user preferences
+- **localStorage**: Persistent user settings (theme, unit preference, last city)
+
+### 🎨 UI/UX Design Choices
+
+**Responsive Design**
+- **Mobile-First Approach**: Prioritized mobile experience with progressive enhancement
+- **CSS Grid & Flexbox**: Modern layout techniques for consistent cross-device experience
+- **Dynamic Backgrounds**: Weather-based gradient backgrounds for immersive experience
+
+**User Experience**
+- **Progressive Enhancement**: Core functionality works without JavaScript enhancements
+- **Graceful Degradation**: Features degrade elegantly when dependencies are unavailable
+- **Loading States**: Clear feedback during API calls and data processing
+
+### 🔧 Technical Implementation
+
+**API Integration**
+- **OpenWeatherMap API**: Reliable weather data source with comprehensive features
+- **Axios HTTP Client**: Robust error handling and request management
+- **Error Boundaries**: Graceful handling of API failures and network issues
+
+**Performance Optimization**
+- **Efficient Re-renders**: Optimized dependency arrays and memoization
+- **Smart Caching**: localStorage for user preferences and API response caching
+- **Code Splitting**: Ready for lazy loading implementation
+
+### 🤔 Assumptions Made
+
+**User Environment**
+- Modern browsers with ES6+ support and geolocation capabilities
+- Reasonable network connectivity for API calls
+- Standard screen sizes and input methods
+
+**Business Rules**
+- Metric system (Celsius) as default temperature unit
+- 5-day forecast provides sufficient planning information
+- Current location detection enhances user experience
+
+**Technical Constraints**
+- OpenWeatherMap free tier rate limits are adequate
+- localStorage availability for persistence
+- React 18 compatibility and lifecycle understanding
+
+### 🔮 Future Considerations
+
+**Scalability**
+- Component structure supports easy feature additions
+- State management ready for complex data flows
+- API layer prepared for multiple data sources
+
+**Maintainability**
+- Clear separation between presentation and logic
+- Reusable utility functions and custom hooks
+- Comprehensive error handling and validation
+
+---
+
+*These design choices prioritize user experience, code maintainability, and performance while making reasonable assumptions about the target environment and user needs.*
 
 
